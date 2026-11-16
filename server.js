@@ -96,6 +96,20 @@ app.use(session({
 app.use("/auth", rateLimit({ windowMs: 60 * 1000, limit: 20 }));
 app.use(express.static(path.join(__dirname, "public")));
 
+// Serve the homepage and frontend files from repository root
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/app.js", (req, res) => {
+  res.sendFile(path.join(__dirname, "app.js"));
+});
+
+app.get("/style.css", (req, res) => {
+  res.sendFile(path.join(__dirname, "style.css"));
+});
+
+
 app.get("/api/status", (_req, res) => {
   const row = account();
   res.json({
