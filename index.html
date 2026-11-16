@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LX ZISHAN SERVER</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><div class="brand">LX <span>ZISHAN</span> SERVER</div><div class="sub">TikTok Account Dashboard</div></header>
+<main>
+  <section class="intro"><h1>আপনার TikTok অ্যাকাউন্ট ম্যানেজ করুন</h1><p>নিরাপদ TikTok অনুমোদনের মাধ্যমে প্রোফাইল ও ভিডিও তথ্য দেখুন।</p></section>
+  <section class="panel" id="connectPanel">
+    <h2>অ্যাকাউন্ট সংযোগ</h2><p id="status">সার্ভারের অবস্থা যাচাই হচ্ছে…</p>
+    <a class="primary" id="connect" href="/auth/tiktok">Continue with TikTok</a>
+  </section>
+  <section class="panel hidden" id="profilePanel">
+    <h2>সংযুক্ত অ্যাকাউন্ট</h2><div class="profile"><img id="avatar" alt=""><div><b id="displayName"></b><small id="openId"></small></div></div>
+    <div class="actions"><button id="loadVideos">আমার ভিডিও দেখুন</button><button class="secondary" id="disconnect">অ্যাকাউন্ট বিচ্ছিন্ন করুন</button></div>
+  </section>
+  <section class="panel hidden" id="videosPanel"><h2>সাম্প্রতিক ভিডিও</h2><div id="videos"></div></section>
+  <p class="notice">এটি অফিসিয়াল TikTok API-নির্ভর অ্যাকাউন্ট ড্যাশবোর্ড। এটি ফলোয়ার/লাইক/ভিউ কৃত্রিমভাবে বাড়ায় না। কোন তথ্য বা কাজ পাওয়া যাবে তা TikTok-এর অনুমোদিত API scope-এর ওপর নির্ভর করে।</p>
+</main>
+<footer>© LX ZISHAN SERVER</footer><script src="/app.js"></script>
+</body></html>
